@@ -12,16 +12,12 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
         - [Uno](#Arduino-Uno-Rev-3)
         - [Nano](#Arduino-Nano)
         - [Leonardo](#Arduino-Leonardo)
-    - [Usage](#usage)
-    - [What's New?](#whats-new)
-    - [Question](#question)
-    - [License](#license)
-    - [Links](#links)
+    - [Examples](#Examples)
 
 <!-- /TOC -->
 It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with and Arduino board with the only difference being the pins are to be used. 
 
-### Commonly used pins for each boards
+## Commonly used pins for each boards
 | Boards | Arduino Mega 2560 | Arduino Uno | Arduino Nano | Arduino Leonardo |
 | ------ | ----------------- | ----------- | ------------ | ----------- |
 | Inbuilt LED Pin | 13 | 13 | 13 | 13
