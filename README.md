@@ -1,23 +1,24 @@
 # Arduino Basics
+
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)  ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 This repository contains all the Arduino sketches and circuit diagrams used in my video tutorial series 'Arduino For Beginners'.
 
 <!-- TOC -->
 
-- [Arduino Basics](#Arduino-Basics)
-    - [Commonly Used Pins](#Commonly-used-pins-for-each-boards)
-    - [Pinouts](#Pinouts)
-        - [Mega](#Arduino-Mega)
-        - [Uno](#Arduino-Uno-Rev-3)
-        - [Nano](#Arduino-Nano)
-        - [Leonardo](#Arduino-Leonardo)
-    - [Examples](#Examples)
+- [Arduino Basics](#arduino-basics)
+  - [Commonly used pins for each boards](#commonly-used-pins-for-each-boards)
+  - [Pinouts](#pinouts)
+    - [Arduino Mega](#arduino-mega)
+    - [Arduino Uno Rev 3](#arduino-uno-rev-3)
+    - [Arduino Nano](#arduino-nano)
+    - [Arduino Leonardo](#arduino-leonardo)
 
 <!-- /TOC -->
-It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with and Arduino board with the only difference being the pins are to be used. 
+It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with and Arduino board with the only difference being the pins are to be used.
 
 ## Commonly used pins for each boards
+
 | Boards | Arduino Mega 2560 | Arduino Uno | Arduino Nano | Arduino Leonardo |
 | ------ | ----------------- | ----------- | ------------ | ----------- |
 | Inbuilt LED Pin | 13 | 13 | 13 | 13
@@ -27,19 +28,19 @@ It contains 10 different examples using the Arduino Mega and various different c
 | LCD SDA and SCL | 20, 21 | A4, A5 | A4, A5 | 3, 2 |
 
 ## Pinouts
+
 ### Arduino Mega
 
-![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Mega-Pinout.png?raw=true)
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Mega-Pinout.png?raw=true)
 
 ### Arduino Uno Rev 3
 
-![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Uno-Pinout.png?raw=true)
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Uno-Pinout.png?raw=true)
 
 ### Arduino Nano
 
-![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Nano-Pinout.png?raw=true)
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Nano-Pinout.png?raw=true)
 
 ### Arduino Leonardo
 
-![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Leonardo-Pinout.png?raw=true)
-
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Leonardo-Pinout.png?raw=true)
