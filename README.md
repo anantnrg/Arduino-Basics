@@ -1,12 +1,23 @@
 # Arduino Basics
-
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)  ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-
 
 This repository contains all the Arduino sketches and circuit diagrams used in my video tutorial series 'Arduino For Beginners'.
 
-It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with and Arduino board with the only difference being the pins are to be used. here are some common pins that are different for each board
+<!-- TOC -->
 
+- [Arduino Basics](#Arduino-Basics)
+    - [Commonly Used Pins](#Commonly-used-pins-for-each-boards)
+    - [Pinouts](#Pinouts)
+    - [Usage](#usage)
+    - [What's New?](#whats-new)
+    - [Question](#question)
+    - [License](#license)
+    - [Links](#links)
+
+<!-- /TOC -->
+It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with and Arduino board with the only difference being the pins are to be used. 
+
+### Commonly used pins for each boards
 | Boards | Arduino Mega 2560 | Arduino Uno | Arduino Nano | Arduino Leonardo |
 | ------ | ----------------- | ----------- | ------------ | ----------- |
 | Inbuilt LED Pin | 13 | 13 | 13 | 13
@@ -15,6 +26,7 @@ It contains 10 different examples using the Arduino Mega and various different c
 | Pin Interrupts  | 2, 3, 18, 19, 20, 21 | 2, 3 | 2, 3 | 0, 1, 2, 3, 7|
 | LCD SDA and SCL | 20, 21 | A4, A5 | A4, A5 | 3, 2 |
 
+## Pinouts
 ### Arduino Mega Pinout
 
 ![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Mega-Pinout.png?raw=true)
@@ -30,3 +42,4 @@ It contains 10 different examples using the Arduino Mega and various different c
 ### Arduino Leonardo Pinout
 
 ![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Leonardo-Pinout.png?raw=true)
+
