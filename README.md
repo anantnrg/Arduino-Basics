@@ -8,6 +8,10 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
 - [Arduino Basics](#Arduino-Basics)
     - [Commonly Used Pins](#Commonly-used-pins-for-each-boards)
     - [Pinouts](#Pinouts)
+        - [Mega](#Arduino-Mega)
+        - [Uno](#Arduino-Uno)
+        - [Nano](#Arduino-Nano)
+        - [Leonardo](#Arduino-Leonardo)
     - [Usage](#usage)
     - [What's New?](#whats-new)
     - [Question](#question)
@@ -27,19 +31,19 @@ It contains 10 different examples using the Arduino Mega and various different c
 | LCD SDA and SCL | 20, 21 | A4, A5 | A4, A5 | 3, 2 |
 
 ## Pinouts
-### Arduino Mega Pinout
+### Arduino Mega
 
 ![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Mega-Pinout.png?raw=true)
 
-### Arduino Uno Rev 3 Pinout
+### Arduino Uno Rev 3
 
 ![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Uno-Pinout.png?raw=true)
 
-### Arduino Nano Pinout
+### Arduino Nano
 
 ![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Nano-Pinout.png?raw=true)
 
-### Arduino Leonardo Pinout
+### Arduino Leonardo
 
 ![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Leonardo-Pinout.png?raw=true)
 
