@@ -1,3 +1,18 @@
+/*
+Read Analog Value
+
+Reads the value of potentiometer connected to Analog pin 0
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, reads the value of the potentiometer connected to analog pin 0
+and prints the value to the serial monitor.
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
 // The setup() function . It only runs once
 void setup() {
     // Start a serial connection at 9600 baud

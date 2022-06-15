@@ -1,3 +1,18 @@
+/*
+LCD using I2C adapter
+
+Prints an inputted character to the LCD connected to the Arduino with an I2C module
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, waits for an input from the serial monitor
+and when a word or character is recieved, prints it to the LCD display.
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
 // External Imports
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>

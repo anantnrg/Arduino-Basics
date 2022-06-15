@@ -1,3 +1,18 @@
+/*
+Blink
+
+Blinks an LED by turning it on for a second and then turning it off
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, blinks the inbuilt led on pin 13. An external
+5mm LED can also be added with a 330 ohm resistor
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
 // Variables
 int ledPin = 13;
 

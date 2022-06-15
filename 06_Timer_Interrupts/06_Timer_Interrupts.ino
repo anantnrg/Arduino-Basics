@@ -1,3 +1,18 @@
+/*
+Timer Interrupts
+
+Uses a timer interrupt to blink a LED
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, uses a timer to turn on the LED connected
+to the Digital Pin 13. It gets triggered every 500 ms.
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
 // Variables
 bool is_led_on = true;
 int ledPin = 13;

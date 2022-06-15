@@ -1,3 +1,19 @@
+/*
+Melody
+
+Plays a simple melody using a piezo buzzer.
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, plays a very simple melody using a piezo 
+buzzer which is connected to Digital Pin 8. It uses the tone library which is installed
+by default. 
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
 // Additional imports
 #include "pitches.h"
 
