@@ -15,3 +15,5 @@ It contains 10 different examples using the Arduino Mega and various different c
 | Pin Interrupts  | 2, 3, 18, 19, 20, 21 | 2, 3 | 2, 3 | 0, 1, 2, 3, 7|
 | LCD SDA and SCL | 20, 21 | A4, A5 | A4, A5 | 3, 2 |
 
+Arduino Mega Pinout
+
