@@ -9,7 +9,7 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
     - [Commonly Used Pins](#Commonly-used-pins-for-each-boards)
     - [Pinouts](#Pinouts)
         - [Mega](#Arduino-Mega)
-        - [Uno](#Arduino-Uno)
+        - [Uno](#Arduino-Uno-Rev-3)
         - [Nano](#Arduino-Nano)
         - [Leonardo](#Arduino-Leonardo)
     - [Usage](#usage)
