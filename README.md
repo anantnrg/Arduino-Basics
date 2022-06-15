@@ -15,5 +15,18 @@ It contains 10 different examples using the Arduino Mega and various different c
 | Pin Interrupts  | 2, 3, 18, 19, 20, 21 | 2, 3 | 2, 3 | 0, 1, 2, 3, 7|
 | LCD SDA and SCL | 20, 21 | A4, A5 | A4, A5 | 3, 2 |
 
-Arduino Mega Pinout
+### Arduino Mega Pinout
 
+![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Mega-Pinout.png?raw=true)
+
+### Arduino Uno Rev 3 Pinout
+
+![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Uno-Pinout.png?raw=true)
+
+### Arduino Nano Pinout
+
+![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Nano-Pinout.png?raw=true)
+
+### Arduino Leonardo Pinout
+
+![](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Leonardo-Pinout.png?raw=true)
