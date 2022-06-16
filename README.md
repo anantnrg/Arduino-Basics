@@ -15,7 +15,9 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
     - [Arduino Leonardo](#arduino-leonardo)
   - [Examples](#Examples)
     - [Blink](#Blink)
-      - [Code](#Code)   
+      - [Code](#Blink-Code)
+      - [Schematic](#Blink-Schematic)
+    - [Fade](#Fade)   
 
 <!-- /TOC -->
 It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with and Arduino board with the only difference being the pins are to be used.
@@ -56,7 +58,7 @@ It contains 10 different examples using the Arduino Mega and various different c
 This example blinks an LED connected to Digital Pin 13 by turning on the LED for a second or 1000 milliseconds ,
 then turning it off for another 1 second.
 
-#### Code
+#### Blink Code
 
 ```
 /*
@@ -93,6 +95,98 @@ void loop() {
 }
 ```
 
-#### Schematic
+#### Blink Schematic
 ![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/led_blink_diag.jpg?raw=true)
 
+
+### Fade
+
+This example fades an LED in and out using a Pulse Width Modulation (PWM) signal
+from Digital Pin 9.
+
+#### Fade Code
+
+```
+/*
+Fade
+
+Fades an LED by using a PWM signal
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, fades and LED connected to Digital pin 9. It uses PWM
+signals to control the fading.
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
+// Variables
+int led = 9;           // The PWM pin the LED is attached to
+int brightness = 0;    // How bright the LED is
+int fadeAmount = 5;    // How much amount to fade the LED by
+
+// The setup() function . It only runs once
+void setup() {
+  // Initialize Digital Pin 9 as an OUTPUT.
+  pinMode(led, OUTPUT);
+}
+
+// The loop() function. It runs again and again until the board is reset or loses power.
+void loop() {
+  // Set the brightness of pin 9:
+  analogWrite(led, brightness);
+  brightness = brightness + fadeAmount; // Fade the LED from dim to bright
+
+  // Fade the LED from bright to dim
+  if (brightness <= 0 || brightness >= 255) {
+    fadeAmount = -fadeAmount;
+  }
+  // Wait 30 ms to see the LED brighten and dim
+  delay(30);
+}
+```
+
+#### Fade Schematic
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/led_fade_diag.jpg?raw=true)
+
+
+### Read Analog Potentiometer value
+
+In this example, we read the value of a potentiometer which is also known as a variable resistor
+using the analogRead() function. The potentiometer is connected to Analog Pin 0 or A0.
+
+#### Potentiometer Code
+
+``` 
+/*
+Read Analog Value
+
+Reads the value of potentiometer connected to Analog pin 0
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, reads the value of the potentiometer connected to analog pin 0
+and prints the value to the serial monitor.
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
+// The setup() function . It only runs once
+void setup() {
+    // Start a serial connection at 9600 baud
+    Serial.begin(9600);
+}
+
+// The loop() function. It runs again and again until the board is reset or loses power.
+void loop() {
+  // Read the potentiometer's value on Analog Pin 0
+  int sensorValue = analogRead(A0);
+  // Print out the value of the potentiometer to the serial monitor
+  Serial.println(sensorValue);
+  delay(100);        // Add a delay for stability
+}
+```
