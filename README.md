@@ -13,6 +13,9 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
     - [Arduino Uno Rev 3](#arduino-uno-rev-3)
     - [Arduino Nano](#arduino-nano)
     - [Arduino Leonardo](#arduino-leonardo)
+  - [Examples](#Examples)
+    - [Blink](#Blink)
+      - [Code](#Code)   
 
 <!-- /TOC -->
 It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with and Arduino board with the only difference being the pins are to be used.
@@ -44,3 +47,52 @@ It contains 10 different examples using the Arduino Mega and various different c
 ### Arduino Leonardo
 
 ![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Arduino-Leonardo-Pinout.png?raw=true)
+
+
+## Examples
+
+### Blink
+
+This example blinks an LED connected to Digital Pin 13 by turning on the LED for a second or 1000 milliseconds ,
+then turning it off for another 1 second.
+
+#### Code
+
+```
+/*
+Blink
+
+Blinks an LED by turning it on for a second and then turning it off
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, blinks the inbuilt led on pin 13. An external
+5mm LED can also be added with a 330 ohm resistor
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
+// Variables
+int ledPin = 13;
+
+
+// The setup() function . It only runs once
+void setup() {
+  // Initialize Digital Pin 13 as an OUTPUT.
+  pinMode(ledPin, OUTPUT);
+}
+
+// The loop() function. It runs again and again until the board is reset or loses power.
+void loop() {
+  digitalWrite(ledPin, HIGH);   //Turn the LED on 
+  delay(1000);                  //Wait for a second
+  digitalWrite(ledPin, LOW);    //Turn the LED off by making the voltage LOW
+  delay(1000);                  //Wait for a second
+}
+```
+
+#### Schematic
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/led_blink_diag.jpg?raw=true)
+
