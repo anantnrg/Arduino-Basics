@@ -17,7 +17,24 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
     - [Blink](#Blink)
       - [Code](#Blink-Code)
       - [Schematic](#Blink-Schematic)
-    - [Fade](#Fade)   
+    - [Fade](#Fade) 
+      - [Code](#Fade-Code)
+      - [Schematic](#Fade-Schematic)
+    - [Analog Potentiometer](#Read-Analog-Potentiometer-value)
+      - [Code](#Potentiometer-Code) 
+      - [Schematic](#Potentiometer-Schematic)  
+    - [Play Melody using a Piezo Buzzer](#Play-Melody-using-a-Piezo-Buzzer) 
+      - [Code](#Pizeo-buzzer-Code)
+      - [Schematic](#Pizeo-buzzer-Schematic)
+    - [Pin Change Interrupts](#Pin-Change-Interrupts)
+      - [Code](#Pin-Change-Interrupt-Code)
+      - [Schematic](#Pin-Change-Interrupt-Schematic) 
+    - [Timer Interrupts](#Timer-Interrupts)
+      - [Code](#Timer-Interrupt-Code)
+      - [Schematic](#Timer-Interrupt-Schematic) 
+    - [LCD I2C](#LCD)
+      - [Code](#LCD-Display-Code)
+      - [Schematic](#LCD-Display-Schematic)  
 
 <!-- /TOC -->
 It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with and Arduino board with the only difference being the pins are to be used.
@@ -190,3 +207,345 @@ void loop() {
   delay(100);        // Add a delay for stability
 }
 ```
+
+#### Potentiometer Schematic
+
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Analog_pot.jpg?raw=true)
+
+
+### Play a melody using a piezo buzzer
+
+This example uses the tone() function to play a melody using a piezo buzzer connected to 
+Digital Pin 7. An additional file called ```pitches.h``` contains the tones which are to 
+be played.
+
+#### Pizeo buzzer Code
+
+```
+/*
+Melody
+
+Plays a simple melody using a piezo buzzer.
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, plays a very simple melody using a piezo 
+buzzer which is connected to Digital Pin 8. It uses the tone library which is installed
+by default. 
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
+// Additional imports
+#include "pitches.h"
+
+// Variables
+int buzzer = 7;
+int melody[] = {
+
+  NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, 0, NOTE_B3, NOTE_C4
+};
+int noteDurations[] = {
+
+  4, 8, 8, 4, 4, 4, 4, 4
+};
+
+// The setup() function . It only runs once
+void setup() {
+  for (int thisNote = 0; thisNote < 8; thisNote++) {
+    int noteDuration = 1000 / noteDurations[thisNote];
+    tone(buzzer, melody[thisNote], noteDuration);
+    int pauseBetweenNotes = noteDuration * 1.30;
+    delay(pauseBetweenNotes);
+    noTone(buzzer);
+
+  }
+}
+
+// The loop() function. It runs again and again until the board is reset or loses power.
+void loop() {
+
+  // no need to repeat the melody.
+}                                                                 
+```
+
+```
+#define NOTE_B0  31
+#define NOTE_C1  33
+#define NOTE_CS1 35
+#define NOTE_D1  37
+#define NOTE_DS1 39
+#define NOTE_E1  41
+#define NOTE_F1  44
+#define NOTE_FS1 46
+#define NOTE_G1  49
+#define NOTE_GS1 52
+#define NOTE_A1  55
+#define NOTE_AS1 58
+#define NOTE_B1  62
+#define NOTE_C2  65
+#define NOTE_CS2 69
+#define NOTE_D2  73
+#define NOTE_DS2 78
+#define NOTE_E2  82
+#define NOTE_F2  87
+#define NOTE_FS2 93
+#define NOTE_G2  98
+#define NOTE_GS2 104
+#define NOTE_A2  110
+#define NOTE_AS2 117
+#define NOTE_B2  123
+#define NOTE_C3  131
+#define NOTE_CS3 139
+#define NOTE_D3  147
+#define NOTE_DS3 156
+#define NOTE_E3  165
+#define NOTE_F3  175
+#define NOTE_FS3 185
+#define NOTE_G3  196
+#define NOTE_GS3 208
+#define NOTE_A3  220
+#define NOTE_AS3 233
+#define NOTE_B3  247
+#define NOTE_C4  262
+#define NOTE_CS4 277
+#define NOTE_D4  294
+#define NOTE_DS4 311
+#define NOTE_E4  330
+#define NOTE_F4  349
+#define NOTE_FS4 370
+#define NOTE_G4  392
+#define NOTE_GS4 415
+#define NOTE_A4  440
+#define NOTE_AS4 466
+#define NOTE_B4  494
+#define NOTE_C5  523
+#define NOTE_CS5 554
+#define NOTE_D5  587
+#define NOTE_DS5 622
+#define NOTE_E5  659
+#define NOTE_F5  698
+#define NOTE_FS5 740
+#define NOTE_G5  784
+#define NOTE_GS5 831
+#define NOTE_A5  880
+#define NOTE_AS5 932
+#define NOTE_B5  988
+#define NOTE_C6  1047
+#define NOTE_CS6 1109
+#define NOTE_D6  1175
+#define NOTE_DS6 1245
+#define NOTE_E6  1319
+#define NOTE_F6  1397
+#define NOTE_FS6 1480
+#define NOTE_G6  1568
+#define NOTE_GS6 1661
+#define NOTE_A6  1760
+#define NOTE_AS6 1865
+#define NOTE_B6  1976
+#define NOTE_C7  2093
+#define NOTE_CS7 2217
+#define NOTE_D7  2349
+#define NOTE_DS7 2489
+#define NOTE_E7  2637
+#define NOTE_F7  2794
+#define NOTE_FS7 2960
+#define NOTE_G7  3136
+#define NOTE_GS7 3322
+#define NOTE_A7  3520
+#define NOTE_AS7 3729
+#define NOTE_B7  3951
+#define NOTE_C8  4186
+#define NOTE_CS8 4435
+#define NOTE_D8  4699
+#define NOTE_DS8 4978
+```
+
+#### Piezo Buzzer Schematic
+
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Piezo.jpg?raw=true)
+
+
+
+### Pin Change Interrupts
+
+In this example, we attach an interrupt to Digital Pin 2 so that whenever the voltage of
+the pin changes, which in this case is the press of a button, switches on an LED connected to 
+Digital Pin 13
+
+#### Pin Change Interrupt Code
+```
+/*
+Pin change interrupts
+
+Pin change interrupts
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, waits for a value change on pin 2 (interrupt_pin 0)
+which occurs when a button is pressed. It then turns on an LED connected to Digital Pin 13
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
+// Variables
+int ledPin = 13;  // LED is attached to digital pin 13
+
+// The setup() function . It only runs once
+void setup() {                
+  pinMode(ledPin, OUTPUT);
+  // Attach an interrupt and tell it which function to call during an interrupt
+  attachInterrupt(0, turn_on_led, HIGH);
+}
+
+// The loop() function. It runs again and again until the board is reset or loses power.
+void loop() {
+  // Turn off the LED
+  digitalWrite(ledPin, LOW);
+  // Wait for an interrupt
+  delay(3000);
+}
+
+// Interrupt Servie Routine (ISR) which is to be called when an interrupt occurs
+void turn_on_led() {
+    // Turn on the LED
+    digitalWrite(ledPin, HIGH);
+}
+```
+
+#### Pin Change Interrupt Schematic
+
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Pin_change_interrupt.jpg?raw=true)
+
+
+### Timer Interrupts
+
+In the last example we use pin change interrupts to turn an LED on and off. In this example, instead
+of a pin change interrupt, we use a timer interrupt which calls a function every 500 milliseconds or 0.5 seconds
+
+
+#### Timer Interrupt Code
+```
+/*
+Timer Interrupts
+
+Uses a timer interrupt to blink a LED
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, uses a timer to turn on the LED connected
+to the Digital Pin 13. It gets triggered every 500 ms.
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
+// Variables
+bool is_led_on = true;
+int ledPin = 13;
+
+// The setup() function . It only runs once
+void setup() {
+  pinMode(ledPin, OUTPUT);        //Set the ledPin to be OUTPUT
+  cli();                      //Stop all interrupts until all the settings are made
+  // Reset the control register to make sure that it starts with everything disabled
+  TCCR1A = 0;                 // Reset entire TCCR1A to 0 
+  TCCR1B = 0;                 // Reset entire TCCR1B to 0
+ 
+  //Set the prescalar to the desired value by changing the CS10 CS12 and CS12 bits.  
+  TCCR1B |= B00000100;        //Set CS12 to 1 so we get prescalar 256  
+  
+  //Enable compare match mode on register A
+  TIMSK1 |= B00000010;        //Set OCIE1A to 1 so we enable compare match A 
+  
+  //Set the value of register A to 31250
+  OCR1A = 31250;             //Set compare register A to this value  
+  sei();                     //Enable back the interrupts
+}
+
+// The loop() function. It runs again and again until the board is reset or loses power.
+void loop() {
+  // nothin here
+}
+
+// This timer will get triggered every 500 ms or 0.5 seconds
+ISR(TIMER1_COMPA_vect){
+  //Set the timer back to 0 so it resets for next interrupt
+  TCNT1  = 0;                  
+  is_led_on = !is_led_on;      // Invert LED state
+  digitalWrite(ledPin,is_led_on);  // Output the inverted state to the LED
+}
+```
+
+
+#### Timer Interrupt Schematics
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Timer_Interupts.jpg?raw=true)
+
+
+### LCD 
+
+In this example we use an LCD display to print characters which we input into the serial monitor.
+The LCD display is connected with an I2C module which makes it easier to control the display. To
+use the module, you have to install the ```LiquidCrystal_I2C``` library from the Arduino IDE 
+Library Manager.
+
+#### LCD Display Code
+
+```
+/*
+LCD using I2C adapter
+
+Prints an inputted character to the LCD connected to the Arduino with an I2C module
+
+This code is a part of the Arduino For Beginners video tutorial series by Anant Narayan.
+This code when uploaded to an Arduino and run, waits for an input from the serial monitor
+and when a word or character is recieved, prints it to the LCD display.
+
+Created 06/15/2022
+by Anant Narayan
+
+This code is licensed under the MIT license
+ */
+
+// External Imports
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+
+// Define the LCD
+LiquidCrystal_I2C lcd(0x27,16,2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+
+// The setup() function . It only runs once
+void setup()
+{
+  lcd.init();                      // Initialize the lcd 
+  lcd.backlight();
+  // Begin serial communication at 9600 baud
+  Serial.begin(9600);
+
+}
+
+// The loop() function. It runs again and again until the board is reset or loses power.
+void loop()
+{
+ if (Serial.available()) {
+    // Wait for a message to arrive
+    delay(100);
+    // Clear the LCD screen
+    lcd.clear();
+    // Read all the inputted characters
+    while (Serial.available() > 0) {
+      // Display each character to the LCD
+      lcd.write(Serial.read());
+    }
+  }
+}
+```
+
+#### LCD Display Schematic
+
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/LCD_I2C.jpg?raw=true)
