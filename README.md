@@ -23,7 +23,7 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
     - [Analog Potentiometer](#Read-Analog-Potentiometer-value)
       - [Code](#Potentiometer-Code) 
       - [Schematic](#Potentiometer-Schematic)  
-    - [Play Melody using a Piezo Buzzer](#Play-Melody-using-a-Piezo-Buzzer) 
+    - [Play Melody using a Piezo Buzzer](#Play-a-Melody-using-a-Piezo-Buzzer) 
       - [Code](#Pizeo-buzzer-Code)
       - [Schematic](#Pizeo-buzzer-Schematic)
     - [Pin Change Interrupts](#Pin-Change-Interrupts)
