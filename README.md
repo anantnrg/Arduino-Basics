@@ -35,7 +35,7 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
     - [LCD I2C](#LCD)
       - [Code](#LCD-Display-Code)
       - [Schematic](#LCD-Display-Schematic)  
-    - [LCD I2C](#LCD)
+    - [PIR Sensor](#PIR-Sensor)
     - 
 
 <!-- /TOC -->
