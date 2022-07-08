@@ -527,7 +527,8 @@ void detect() {
       beep++;
      }
   }
-}```
+}
+```
 
 #### PIR Sensor Schematic
 ![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/PIR_sensor.png?raw=true)
