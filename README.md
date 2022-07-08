@@ -33,8 +33,8 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
       - [Code](#LCD-Display-Code)
       - [Schematic](#LCD-Display-Schematic)  
     - [PIR Sensor](#PIR-Sensor)
-      - [Code] (#PIR-Sensor-Code)
-      - [Schematic] (#PIR-Sensor-Schematic) 
+      - [Code](#PIR-Sensor-Code)
+      - [Schematic](#PIR-Sensor-Schematic) 
 
 <!-- /TOC -->
 It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with any Arduino board with the only difference being the pins which are to be used.
