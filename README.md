@@ -532,4 +532,4 @@ void detect() {
 ```
 
 #### PIR Sensor Schematic
-![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/PIR_sensor.png?raw=true)
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/PIR_sensor.jpg?raw=true)
