@@ -482,3 +482,52 @@ void loop()
 #### LCD Display Schematic
 
 ![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/LCD_I2C.jpg?raw=true)
+
+
+### PIR Sensor
+
+A PIR sensor or Passive Infra-red sensor uses a pyroelectric sensor module to detect when a human or animal comes into its field of view (FOV). It works by detecting
+the infra-red radiation emitted by any living being in the form of heat.
+
+#### PIR Sensor Code
+
+```int ledPin = 13;                // choose the pin for the LED
+int pirPin = 8;               // choose the input pin (for PIR sensor)
+int pirState = LOW;             // we start, assuming no motion detected
+int beep = 0;
+int buzzerPin = 12;
+int val = 0;
+ 
+void setup() {
+  pinMode(ledPin, OUTPUT);      // declare LED as output
+  pinMode(pirPin, INPUT);     // declare sensor as input
+  pinMode(buzzerPin, OUTPUT);
+  Serial.begin(9600);
+}
+ 
+void loop(){
+  detect();
+  
+}
+
+void detect() {
+  int val = digitalRead(pirPin);
+  delay(500);
+  Serial.println(val);
+  beep = 0;
+
+  if (val == 1) {
+   while (beep < 5) {
+      digitalWrite(ledPin, HIGH);
+      tone(buzzerPin, 2000);
+      delay(500);
+      digitalWrite(ledPin, LOW);
+      noTone(buzzerPin);
+      delay(500);
+      beep++;
+     }
+  }
+}```
+
+#### PIR Sensor Schematic
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/PIR_sensor.png?raw=true)
