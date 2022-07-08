@@ -5,7 +5,7 @@
 This repository contains all the Arduino sketches and circuit diagrams used in my video tutorial series 'Arduino For Beginners'.
 
 <!-- TOC -->
-
+### Table Of Contents
 - [Arduino Basics](#arduino-basics)
   - [Commonly used pins for each boards](#commonly-used-pins-for-each-boards)
   - [Pinouts](#pinouts)
