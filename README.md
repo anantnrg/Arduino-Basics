@@ -533,3 +533,13 @@ void detect() {
 
 #### PIR Sensor Schematic
 ![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/PIR_sensor.jpg?raw=true)
+
+
+### Soil Moisture Sensor
+In this example, we use a resistive soil moisture to measure the amount of water in the soil. It works by sensing the resistance between the two legs of the sensor. When the soil is dry the resistance is high and when water is added to the soil, the resistance decreases. Using this information, we can determine if the soil is wet or dry.
+
+#### Soil Moisture Sensor Code
+
+```
+
+```
