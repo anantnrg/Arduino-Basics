@@ -35,6 +35,9 @@ This repository contains all the Arduino sketches and circuit diagrams used in m
     - [PIR Sensor](#PIR-Sensor)
       - [Code](#PIR-Sensor-Code)
       - [Schematic](#PIR-Sensor-Schematic) 
+    - [Soil Moisture Sensor](#Soil-Moisture-Sensor)
+      - [Code](#Soil-Moisture-Sensor-Code)
+      - [Schematic](#Soil-Moisture-Sensor-Schematic)  
 
 <!-- /TOC -->
 It contains 10 different examples using the Arduino Mega and various different components such as LEDs, pushbuttons, piezo buzzers, LCDs etc.. These example should work fine with any Arduino board with the only difference being the pins which are to be used.
@@ -541,5 +544,32 @@ In this example, we use a resistive soil moisture to measure the amount of water
 #### Soil Moisture Sensor Code
 
 ```
+int sensorPin = A0; 
+int sensorValue;  
+int limit = 300; 
+int ledPin = 13;
 
+void setup() {
+ Serial.begin(9600);
+ pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+
+ sensorValue = analogRead(sensorPin); 
+ Serial.println("Analog Value : ");
+ Serial.println(sensorValue);
+ 
+ if (sensorValue<limit) {
+ digitalWrite(ledPin, HIGH); 
+ }
+ else {
+ digitalWrite(ledPin, LOW); 
+ }
+ 
+ delay(1000); 
+} 
 ```
+
+#### Soil Moisture Sensor Schematic
+[ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Soil_Moisture_sensor.jpg?raw=true)
