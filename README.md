@@ -572,4 +572,4 @@ void loop() {
 ```
 
 #### Soil Moisture Sensor Schematic
-[ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Soil_Moisture_sensor.jpg?raw=true)
+![ ](https://github.com/anantnrg/Arduino-Basics/blob/main/Diagrams/Soil_Moisture_sensor.jpg?raw=true)
