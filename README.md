@@ -80,7 +80,7 @@ then turning it off for another 1 second.
 
 #### Blink Code
 
-```
+```cpp
 /*
 Blink
 
@@ -126,7 +126,7 @@ from Digital Pin 9.
 
 #### Fade Code
 
-```
+```cpp
 /*
 Fade
 
@@ -179,7 +179,7 @@ using the analogRead() function. The potentiometer is connected to Analog Pin 0 
 
 #### Potentiometer Code
 
-``` 
+``` cpp
 /*
 Read Analog Value
 
@@ -224,7 +224,7 @@ be played.
 
 #### Pizeo buzzer Code
 
-```
+```cpp
 /*
 Melody
 
@@ -274,7 +274,7 @@ void loop() {
 }                                                                 
 ```
 
-```
+```cpp
 #define NOTE_B0  31
 #define NOTE_C1  33
 #define NOTE_CS1 35
@@ -379,7 +379,7 @@ the pin changes, which in this case is the press of a button, switches on an LED
 Digital Pin 13
 
 #### Pin Change Interrupt Code
-```
+```cpp
 /*
 Pin change interrupts
 
@@ -433,7 +433,7 @@ Library Manager.
 
 #### LCD Display Code
 
-```
+```cpp
 /*
 LCD using I2C adapter
 
@@ -495,7 +495,8 @@ the infra-red radiation emitted by any living being in the form of heat.
 
 #### PIR Sensor Code
 
-```int ledPin = 13;                // choose the pin for the LED
+```cpp
+int ledPin = 13;                // choose the pin for the LED
 int pirPin = 8;               // choose the input pin (for PIR sensor)
 int pirState = LOW;             // we start, assuming no motion detected
 int beep = 0;
@@ -543,7 +544,7 @@ In this example, we use a resistive soil moisture to measure the amount of water
 
 #### Soil Moisture Sensor Code
 
-```
+```cpp
 int sensorPin = A0; 
 int sensorValue;  
 int limit = 300; 
